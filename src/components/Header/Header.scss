@@ -1,0 +1,41 @@
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0px;
+    background-color: #FF6A37;
+    .header-top-l {
+        padding: 15px;
+    }
+    .header-top-l , .header-top-r{
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            color: #FBFEFA;
+        }
+        a {
+            text-decoration: none;
+        }
+        .item-header-top {
+            color: #FBFEFA;
+        }
+        .vert-line {
+            border-left: 1px solid #fbfefa85;
+            height: 20px;
+        }
+        .list-follow-us {
+            display: flex;
+            ul {
+                margin-left: 10px;
+                i {
+                    color: #FBFEFA;
+                }
+            }
+        }
+    }
+    
+}
