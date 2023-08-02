@@ -12,9 +12,14 @@
 .search {
     width: 90%;   
     .item-list-search {
-        text-decoration: none;
-        color: #f0f0f0;
-        font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-transform: capitalize;
+    }
+    a {
+      color: #f0f0f0;
+      font-size: 18px;
     }
   }
   
@@ -43,14 +48,28 @@
     display: flex;
     gap: 15px;
     .menu-sidebar {
+      button {
+        outline: none;
+        border: none;
+      }
         i{
-            font-size: 25px;
+            font-size: 30px;
+            background-color: #FF6A37;
+            color: #f0f0f0;
+            
         }
+    }
+    .icon-store{
+      display: flex;
+      gap: 10px;
+      font-size: 30px;
+      margin-right: 40px;
     }
   }
   .navbar-cart {
     display: flex;
     align-items: center;
+    margin-left: 20px;
         position: relative;
         .cart-item {
           color: white;

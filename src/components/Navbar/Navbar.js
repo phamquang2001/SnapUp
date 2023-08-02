@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { setSidebarOn } from "../pages/store/sidebarSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getSidebarStatus } from "../pages/store/sidebarSlice";
+import {
+  getAllCategories,
+  selectCategories,
+} from "../pages/store/categorySlice";
 function Navbar(props) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllCategories());
+  }, []);
+  const categories = useSelector(selectCategories);
   return (
     <div className="navbar">
       <div className="horizan-line"></div>
       <div className="navbar-container">
         <div className="menu-sidebar">
-          <button type="button" className="sidebar-btn">
+          <button
+            type="button"
+            className="sidebar-btn"
+            onClick={() => dispatch(setSidebarOn())}
+          >
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
-        <div>
+        <div className="icon-store">
           <i class="fa-solid fa-store"></i>
           <span>SnapUp</span>
         </div>
@@ -21,10 +36,14 @@ function Navbar(props) {
             <input type="text" placeholder="Search" />
             <button type="submit">Search</button>
           </form>
-          <ul>
-            <li>
-              <Link className="item-list-search">Category here</Link>
-            </li>
+          <ul className="item-list-search">
+            {categories.slice(0, 8).map((e, id) => {
+              return (
+                <li key={id}>
+                  <Link to=''>{e}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="navbar-cart">
