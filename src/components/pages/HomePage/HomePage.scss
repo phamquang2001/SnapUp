@@ -1,0 +1,22 @@
+main {
+    padding: 0 50px;
+    background-color: #ddd9e0;
+}
+.main-container {
+    
+    margin-top: 20px;
+    .categories {
+        padding: 20px;
+        border-left: 5px solid black;
+        background-color: #ffffff;
+        .title-main {
+            
+            h3 {
+                opacity: 0.5;
+                font-size: 25px;
+            }
+        }
+        
+    }
+}
+

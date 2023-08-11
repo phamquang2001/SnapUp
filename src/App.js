@@ -19,6 +19,9 @@ function App() {
         <BrowserRouter>
           <Header />
           <Sidebar />
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+          </Routes>
         </BrowserRouter>
       </Provider>
     </div>

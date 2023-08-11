@@ -29,9 +29,8 @@ function Sidebar(props) {
         <div className="list-categories">
           <ul>
             {categories.map((e, id) => {
-              console.log(e);
               return (
-                <li className="text-capitalize" key={id}>
+                <li className="text-capitalize item-category" key={id}>
                   <Link to="">{e}</Link>
                 </li>
               );
