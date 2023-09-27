@@ -53,8 +53,9 @@ function Navbar(props) {
           <ul className="item-list-search">
             {categories.slice(0, 8).map((e, id) => {
               return (
+
                 <li key={id}>
-                  <Link to="">{e}</Link>
+                  <Link to={`/product/category/${e}`}>{e}</Link>
                 </li>
               );
             })}

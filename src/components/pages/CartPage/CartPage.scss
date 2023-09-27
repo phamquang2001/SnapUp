@@ -28,10 +28,9 @@
 .cart-header,
 .cart-detail {
   background-color: #ffffff;
-
   display: flex;
   justify-content: space-around;
-  padding: 25px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #ddd;
   button {
     width: auto;
@@ -46,6 +45,8 @@
   padding: 10px 0px;
 }
 .cart-bottom {
+  overflow: auto;
+  height: 310px;
 }
 .cart-header > p {
   flex: 1;

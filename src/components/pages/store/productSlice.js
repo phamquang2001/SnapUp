@@ -4,7 +4,8 @@ import axios from "axios";
 
 const initialState = {
     products: [],
-    productSingle: []
+    productSingle: [],
+    productByCategory: []
 }
 
 const productSlice = createSlice({
@@ -19,6 +20,7 @@ const productSlice = createSlice({
         .addCase(fetchApiProductSingle.fulfilled , (state,action) =>{
             state.productSingle = action.payload
         })
+        
     }
 })
 
@@ -31,6 +33,7 @@ export const fetchApiProductSingle = createAsyncThunk('product-single/fetch', as
     const response = await axios(`${BASE_URL}product/${id}`)
     return response.data;
 })
+
 
 export const getApiProduct = (state) => state.product.products
 export const getApiProductSingle = (state) => state.product.productSingle

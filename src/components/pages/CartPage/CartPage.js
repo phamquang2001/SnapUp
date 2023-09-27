@@ -74,7 +74,7 @@ function CartPage(props) {
       </div>
       <div className="cart-cfoot">
         <div className="cart-cfoot-l">
-          <button className="btn-clear-cart">
+          <button className="btn-clear-cart" onClick={() => dispatch(clearCart())}>
             <i class="fa-solid fa-trash"></i>Clear Cart
           </button>
         </div>
