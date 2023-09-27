@@ -6,7 +6,7 @@ function ProductList(props) {
     return (
         <div className="list-product">
             {products.map(product =>{
-                let discountPrice = (product.price) - (product.price * product.discountPercentage / 100)
+                let discountPrice = ((product.price) - (product.price * product.discountPercentage / 100))?.toFixed(2)
                 return (
                     <div>
                         <Product

@@ -1,0 +1,115 @@
+.cart {
+  background-color: #F5F4F6;
+  border: 1px solid #ddd;
+  padding: 20px 150px;
+  height: 630px;
+  .empty-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    a {
+      margin-top: 20px;
+      font-size: 15px;
+      border-radius: 5px;
+      background-color: #ff6a37;
+      color: #ffffff;
+      padding: 10px;
+      width: auto;
+    }
+  }
+}
+.qty-cart {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.cart-header,
+.cart-detail {
+  background-color: #ffffff;
+
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+  button {
+    width: auto;
+  }
+
+}
+
+.cart-header {
+  font-weight: bold;
+  margin: 20px 0px;
+  background-color: #ffffff;
+  padding: 10px 0px;
+}
+.cart-bottom {
+}
+.cart-header > p {
+  flex: 1;
+  text-align: center;
+}
+.cart-detail > p {
+  flex: 1;
+  text-align: center;
+}
+.go-back-to-homepage {
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #ff6a37;
+    color: #ffffff;
+    padding: 10px;
+    width: auto;
+  }
+}
+
+.cart-cfoot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  align-items: center;
+  .cart-cfoot-l {
+    .btn-clear-cart {
+      border: 1px solid #ff6a37;
+      color: #ff6a37;
+      display: flex;
+      gap: 5px;
+      padding: 5px 10px;
+    }
+  }
+  .cart-cfoot-r {
+    display: flex;
+    flex-direction: column;
+    .cart-cfoot-amount {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .total-amount-cart {
+        font-weight: bold;
+        font-size: 25px;
+        color: red;
+      }
+    }
+
+    .btn-check-out {
+      justify-content: center;
+      border: none;
+      color: #ffffff;
+      background-color: #ff6a37;
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+}

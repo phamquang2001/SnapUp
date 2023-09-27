@@ -1,0 +1,24 @@
+.about-snapup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.copy-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.vert-line {
+    border-left: 1px solid white; /* You can adjust the width and color as needed */
+    height: 20px; /* Adjust the height of the line */
+    margin: 0 10px; /* Add spacing around the line */
+  }
+  .bg-orange {
+    background-color: orange;
+  }
+  
+  .text-white {
+    color: white;
+  }

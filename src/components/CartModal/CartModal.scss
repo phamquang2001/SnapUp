@@ -1,0 +1,75 @@
+.cart-modal-detail {
+    color: #000000;
+    background-color: #d5d5d5;
+    // opacity: 0.9;
+    border-radius: 10px;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    
+    }
+    .cart-modal-detail-empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        a {
+            margin-top: 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: #FF6A37;
+            color: #ffffff;
+            padding: 10px;
+            width: auto;
+        }
+    }
+    
+    h6 {
+        justify-content: center;
+        display: flex;
+        padding: 10px 0px;
+    }
+    .list-mini-cart {
+        color: #000000;
+    }
+    .detail-cart {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Chia thành 4 cột bằng nhau */
+        gap: 10px;
+        align-items: center;
+        img{
+            width: 90px;
+            height: 70px;
+        }
+        a {
+            font-size: 13px;
+        }
+        div {
+            font-size: 13px;
+        }
+        
+    }
+    .totalPriceMiniCart{
+        padding: 5px 10px;
+        color: red;;
+    }
+    .viewShoppingCarts {
+        display: flex;
+        justify-content: center;
+        button {
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: #FF6A37;
+            color: #ffffff;
+            padding: 5px;
+            margin: 10px;
+            border: none;
+            width: auto;
+            cursor: pointer;
+        }
+        
+    }
+}

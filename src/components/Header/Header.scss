@@ -1,16 +1,23 @@
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 ul {
     list-style: none;
 }
 
 .container {
-    margin: 0px;
+    padding: 0px 40px;
     background-color: #FF6A37;
-    .header-top-l {
-        padding: 15px;
+    .header-top {
+        display: flex;
+        justify-content: space-between;
     }
+    
     .header-top-l , .header-top-r{
-        
+        padding: 15px 30px 0px 30px;
         ul {
             display: flex;
             justify-content: center;

@@ -19,7 +19,7 @@
     }
     a {
       color: #f0f0f0;
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   
@@ -83,5 +83,20 @@
           position: absolute;
           top: 10px;
           right: -10px;
+        }
+        .cart-modal {
+          display: none;
+          // position: absolute;
+          // right: 0;
+
+          z-index: 9999;
+          width: 300px
+        }
+        :hover {
+          .cart-modal {
+            position: absolute;
+            display: block;
+            right: 0;
+          }
         }
   }

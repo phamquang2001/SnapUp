@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import Navbar from "../Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Header(props) {
   return (
@@ -28,19 +28,19 @@ function Header(props) {
                 <span>Follow us on</span>
                 <ul>
                   <li>
-                    <a href="www.facebook.com">
+                    <a href="https://www.facebook.com">
                       <i className="fab fa-facebook"></i>
                     </a>
                   </li>
                   <li className="vert-line"></li>
                   <li>
-                    <a href="www.instagram.com">
+                    <a href="https://www.instagram.com">
                       <i className="fab fa-instagram"></i>
                     </a>
                   </li>
                   <li className="vert-line"></li>
                   <li>
-                    <a href="www.twitter.com">
+                    <a href="https://www.twitter.com">
                       <i className="fab fa-twitter"></i>
                     </a>
                   </li>
