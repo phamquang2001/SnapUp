@@ -30,7 +30,7 @@ function Sidebar(props) {
           <ul>
             {categories.map((e, id) => {
               return (
-                <li className="text-capitalize item-category" key={id}>
+                <li className="text-capitalize item-category" key={id} onClick={() =>dispatch(setSidebarOff())}>
                   <Link to={`/product/category/${e}`}>{e}</Link>
                 </li>
               );

@@ -11,14 +11,14 @@ function Header(props) {
           <div className="header-top-l">
             <ul>
               <li>
-                <Link to="/seller" className="item-header-top">
+                <Link to="/" className="item-header-top">
                   {" "}
                   Seller Center
                 </Link>
               </li>
               <li className="vert-line"></li>
               <li>
-                <Link to="/download" className="item-header-top">
+                <Link to="/" className="item-header-top">
                   {" "}
                   Download
                 </Link>
@@ -54,20 +54,7 @@ function Header(props) {
                 <i class="fa-solid fa-circle-question"></i>
                 <span style={{ marginLeft: "10px" }}>Support</span>
               </li>
-              <li className="vert-line"></li>
-              <li>
-                <Link to="/register" className="item-header-top">
-                  {" "}
-                  Register
-                </Link>
-              </li>
-              <li className="vert-line"></li>
-              <li className="list-follow-us">
-                <Link to="/login" className="item-header-top">
-                  {" "}
-                  Login
-                </Link>
-              </li>
+              
             </ul>
           </div>
         </div>

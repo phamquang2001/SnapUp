@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { setSidebarOn } from "../pages/store/sidebarSlice";
@@ -20,12 +20,16 @@ function Navbar(props) {
   const categories = useSelector(selectCategories);
   const carts = useSelector(getAllCarts);
   const itemsCount = useSelector(getCartItemsCount);
+  const [searchTerm , setSearchTerm] = useState("")
   useEffect(() => {
     dispatch(getAllCategories());
     dispatch(getCartTotal());
   }, [carts]);
-  console.log(carts);
-  console.log(itemsCount);
+  const handleSearchTerm = (e) =>{
+    e.preventDefault()
+    setSearchTerm(e.target.value)
+  }
+  console.log(searchTerm);
   return (
     <div className="navbar">
       <div className="horizan-line"></div>
@@ -47,8 +51,8 @@ function Navbar(props) {
         </Link>
         <div className="search">
           <form class="search-form">
-            <input type="text" placeholder="Search your preferred items here" />
-            <button type="submit">Search</button>
+            <input onChange={(e) => handleSearchTerm(e)} type="text" placeholder="Search your preferred items here" />
+            <Link to={`search/${searchTerm}`}><button type="submit">Search</button></Link>
           </form>
           <ul className="item-list-search">
             {categories.slice(0, 8).map((e, id) => {

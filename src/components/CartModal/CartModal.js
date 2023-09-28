@@ -3,8 +3,6 @@ import "./CartModal.scss";
 import { Link } from "react-router-dom";
 function CartModal(props) {
   const { carts, itemsCount } = props;
-  console.log(carts);
-  console.log(itemsCount);
   let totalPriceMiniCart = 0;
   return (
     <div>
@@ -17,7 +15,7 @@ function CartModal(props) {
             <div className="list-mini-cart">Product</div>
             <div className="list-mini-cart">TotalPrice</div>
           </div>
-          <ul>
+          <ul className="scrollbar-list-mini-cart">
             {carts.map((e) => {
               totalPriceMiniCart += e.totalPrice;
               return (
