@@ -7,3 +7,18 @@
         }
     }
 }
+.banner-header-maw-width-768px {
+    display: none;
+    img {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 768px){
+    .banner-header {
+        display: none;
+    }
+    .banner-header-maw-width-768px {
+        display: block;
+    }
+}

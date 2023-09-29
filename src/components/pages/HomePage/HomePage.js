@@ -54,7 +54,7 @@ function HomePage(props) {
             <h3>SEE OUR PRODUCTS</h3>
           </div>
         </div>
-        <ProductList products={products} />
+        <ProductList products={products.slice(0,10)} />
       </div>
       <div className="main-container">
         <div className="categories">

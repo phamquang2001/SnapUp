@@ -4,7 +4,7 @@
   padding: 20px;
   gap: 20px;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   .list-product {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

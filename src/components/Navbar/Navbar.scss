@@ -98,7 +98,7 @@
     }
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
   .navbar {
     display: flex;
     justify-content: center;
@@ -108,9 +108,9 @@
       margin: auto;
     }
     .search {
-      width: 75%;
+      width: 80%;
       .search-form {
-        width: 250px;
+        width: 100%;
       }
     }
   }
@@ -122,9 +122,7 @@
       display: none;
     }
   }
-  .navbar-cart {
-    right: -25px;
-  }
+  
   .search-form input[type="text"] {
     flex-grow: 1;
     padding: 5px;
@@ -166,3 +164,4 @@
     right: -10px;
   }
 }
+

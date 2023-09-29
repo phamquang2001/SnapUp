@@ -14,10 +14,39 @@ function HeaderSlider(props) {
     slidesToShow: 2,
     slidesToScroll: 1,
   };
+  let settings2 = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="slider">
         <div className="banner-header">
           <Slider {...settings}>
+          <div className="item-slider">
+              <img src={images[0]} alt=""></img>
+            </div>
+            <div className="item-slider">
+               <img src={images[1]} alt=""/>
+            </div>
+            <div className="item-slider">
+              <img src={images[2]} alt=""></img>
+            </div>
+            <div className="item-slider">
+              <img src={images[3]} alt=""></img>
+            </div>
+            <div className="item-slider">
+              <img src={images[4]} alt=""></img>
+            </div>
+          </Slider>
+        </div>
+        <div className="banner-header-maw-width-768px">
+          <Slider {...settings2}>
           <div className="item-slider">
               <img src={images[0]} alt=""></img>
             </div>
