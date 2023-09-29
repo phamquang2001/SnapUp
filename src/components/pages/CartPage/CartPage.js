@@ -1,13 +1,12 @@
 import React from "react";
 import "./CartPage.scss";
-import { UseSelector, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   getAllCarts,
   removeFromCart,
   toggleCartQty,
   clearCart,
-  getCartTotal,
 } from "../store/cartSlice";
 function CartPage(props) {
   const dispatch = useDispatch();
@@ -61,7 +60,6 @@ function CartPage(props) {
             <p>{e?.totalPrice?.toFixed(2)} $</p>
             <p>
               <button
-                
                 onClick={() => {
                   dispatch(removeFromCart(e));
                 }}
@@ -74,15 +72,21 @@ function CartPage(props) {
       </div>
       <div className="cart-cfoot">
         <div className="cart-cfoot-l">
-          <button className="btn-clear-cart" onClick={() => dispatch(clearCart())}>
+          <button
+            className="btn-clear-cart"
+            onClick={() => dispatch(clearCart())}
+          >
             <i class="fa-solid fa-trash"></i>Clear Cart
           </button>
         </div>
         <div className="cart-cfoot-r">
           <div className="cart-cfoot-amount">
-            Total ({itemsCount}) items: <p className="total-amount-cart">{totalAmount.toFixed(2)} $</p> 
+            Total ({itemsCount}) items:{" "}
+            <p className="total-amount-cart">{totalAmount.toFixed(2)} $</p>
           </div>
-          <button className="btn-check-out">Check Out</button>
+          <button className="btn-check-out">
+            <Link to="/checkout">Check Out </Link>
+          </button>
         </div>
       </div>
       <div className="go-back-to-homepage">

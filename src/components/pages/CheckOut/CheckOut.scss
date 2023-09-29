@@ -1,0 +1,114 @@
+.container-checkout {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  min-height: 710px;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  .btn-submit-checkout {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 2px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .order-summary {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .order-summary h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .order-summary ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .order-summary li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .left-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
+  }
+
+  .right-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    .cart-detail {
+      padding: 14px 0;
+    }
+    .qty-cart {
+      display: flex;
+      align-items: center;
+    }
+    .img-product-checkout {
+      width: 90px;
+      height: 70px;
+    }
+  }
+  .center-section {
+    width: 300px; /* Độ rộng của div */
+  height: 200px; /* Chiều cao của div */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center; /* Căn giữa nội dung ngang */
+  line-height: 200px; /* Căn giữa nội dung dọc */
+  position: absolute; /* Để làm việc với position */
+  top: 50%; /* Đưa div lên phía trên 50% của màn hình */
+  left: 50%; /* Đưa div lên phía trái 50% của màn hình */
+  transform: translate(-50%, -50%); 
+  }
+}

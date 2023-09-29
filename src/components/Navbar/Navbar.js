@@ -20,16 +20,15 @@ function Navbar(props) {
   const categories = useSelector(selectCategories);
   const carts = useSelector(getAllCarts);
   const itemsCount = useSelector(getCartItemsCount);
-  const [searchTerm , setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     dispatch(getAllCategories());
     dispatch(getCartTotal());
   }, [carts]);
-  const handleSearchTerm = (e) =>{
-    e.preventDefault()
-    setSearchTerm(e.target.value)
-  }
-  console.log(searchTerm);
+  const handleSearchTerm = (e) => {
+    e.preventDefault();
+    setSearchTerm(e.target.value);
+  };
   return (
     <div className="navbar">
       <div className="horizan-line"></div>
@@ -45,19 +44,24 @@ function Navbar(props) {
         </div>
         <Link to="/" style={{ color: "#ffffff" }}>
           <div className="icon-store">
-            <i class="fa-solid fa-store"></i>
+            <img style={{width: '30px'}} src="logoSnapUp.jpg" />
             <span>SnapUp</span>
           </div>
         </Link>
         <div className="search">
           <form class="search-form">
-            <input onChange={(e) => handleSearchTerm(e)} type="text" placeholder="Search your preferred items here" />
-            <Link to={`search/${searchTerm}`}><button type="submit">Search</button></Link>
+            <input
+              onChange={(e) => handleSearchTerm(e)}
+              type="text"
+              placeholder="Search your preferred items here"
+            />
+            <Link to={`search/${searchTerm}`}>
+              <button type="submit">Search</button>
+            </Link>
           </form>
           <ul className="item-list-search">
             {categories.slice(0, 8).map((e, id) => {
               return (
-
                 <li key={id}>
                   <Link to={`/product/category/${e}`}>{e}</Link>
                 </li>
@@ -69,7 +73,9 @@ function Navbar(props) {
           <Link>
             <i className="fa-solid fa-cart-shopping cart-item"></i>
             <div className="cart-item-value">{itemsCount}</div>
-            <div className="cart-modal"><CartModal carts={carts} itemsCount={itemsCount} /></div>
+            <div className="cart-modal">
+              <CartModal carts={carts} itemsCount={itemsCount} />
+            </div>
           </Link>
         </div>
       </div>

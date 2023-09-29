@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./ProductSinglePage.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { UseSelector, useDispatch, useSelector } from "react-redux";
 import {
   fetchApiProductSingle,
@@ -49,8 +49,6 @@ function ProductSinglePage(props) {
     dispatch(addToCart({...product, quantity: quantity, totalPrice, discountPrice }))
     dispatch(setCartMessageOn())
   }
-  console.log(product);
-  console.log(getMessage)
   return (
     <main className="py-5 bg-whitesmoke">
       <div className="product-single">
@@ -171,9 +169,11 @@ function ProductSinglePage(props) {
                   <i className="fas fa-shopping-cart"></i>
                   <span className="btn-text">Add to Cart</span>
                 </button>
-                <button className="buy-now">
-                  <span className="btn-text">Buy Now</span>
-                </button>
+                <Link to="/checkout">
+                  <button onClick={() => addToCartHandle(product)} className="buy-now">
+                    <span className="btn-text">Buy Now</span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
