@@ -131,7 +131,7 @@ function CheckOut(props) {
             <p>Total Price</p>
             <p>Action</p>
           </div>
-          <div className="cart-bottom">
+          <div className="cart-bottom-checkout">
             {carts.map((e) => (
               <div className="cart-detail" key={e.id}>
                 <Link to={`/product/${e?.id}`}>
@@ -170,7 +170,7 @@ function CheckOut(props) {
                       dispatch(removeFromCart(e));
                     }}
                   >
-                    Delete
+                    <i class="fa-solid fa-x"></i>
                   </button>
                 </p>
               </div>

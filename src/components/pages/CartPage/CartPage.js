@@ -37,7 +37,7 @@ function CartPage(props) {
           <div className="cart-detail" key={e.id}>
             <p>{idx + 1}</p>
             <p>{e?.title}</p>
-            <p>{e?.discountPrice?.toFixed(2)} $</p>
+            <p className="unit-price">{e?.discountPrice?.toFixed(2)} $</p>
             <p className="qty-cart">
               <button
                 onClick={() =>
@@ -64,7 +64,7 @@ function CartPage(props) {
                   dispatch(removeFromCart(e));
                 }}
               >
-                Delete
+                <i class="fa-solid fa-x"></i>
               </button>
             </p>
           </div>

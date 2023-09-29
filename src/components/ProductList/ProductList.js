@@ -8,7 +8,7 @@ function ProductList(props) {
             {products.map(product =>{
                 let discountPrice = ((product.price) - (product.price * product.discountPercentage / 100))?.toFixed(2)
                 return (
-                    <div>
+                    <div className='item-product'>
                         <Product
                         key = {products.id}
                         product = {{...product, discountPrice}}

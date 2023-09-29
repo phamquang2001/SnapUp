@@ -42,7 +42,7 @@ function Navbar(props) {
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
-        <Link to="/" style={{ color: "#ffffff" }}>
+        <Link className="logo-store" to="/" style={{ color: "#ffffff" }}>
           <div className="icon-store">
             <img style={{width: '30px'}} src="logoSnapUp.jpg" />
             <span>SnapUp</span>
@@ -70,7 +70,7 @@ function Navbar(props) {
           </ul>
         </div>
         <div className="navbar-cart">
-          <Link>
+          <Link to="/cart">
             <i className="fa-solid fa-cart-shopping cart-item"></i>
             <div className="cart-item-value">{itemsCount}</div>
             <div className="cart-modal">

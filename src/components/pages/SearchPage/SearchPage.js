@@ -22,13 +22,15 @@ function SearchPage(props) {
     );
   }
   return (
-    <div className="main-container">
-      <div className="categories">
-        <div className="title-main">
-          <h3>Search Result: </h3>
+    <div className="container-search-page">
+      <div className="main-container">
+        <div className="categories">
+          <div className="title-main">
+            <h3>Search Result: </h3>
+          </div>
         </div>
+        <ProductList products={searchProduct} />
       </div>
-      <ProductList products={searchProduct} />
     </div>
   );
 }

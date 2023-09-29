@@ -1,6 +1,17 @@
 .list-product {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px ;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+@media only screen and (max-width: 375px) {
+  .list-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding:10px 0px;
+  }
+  .item-product {
+    // width: 200px;
+  }
 }

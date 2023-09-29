@@ -1,102 +1,168 @@
 .navbar {
-    padding: 15px;
-    font-size: 20px;
-    color: white;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
 }
 .horizan-line {
-    border: none;
+  border: none;
   border-top: 1px solid rgb(231, 224, 224);
   height: 0;
   padding-bottom: 15px;
 }
 .search {
-    width: 90%;   
-    .item-list-search {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      text-transform: capitalize;
-    }
-    a {
-      color: #f0f0f0;
-      font-size: 16px;
-    }
-  }
-  
-  .search-form {
+  width: 90%;
+  .item-list-search {
     display: flex;
-    background-color: #f0f0f0;
-    padding: 5px;
-    border-radius: 5px;
-    gap: 5px;
+    align-items: center;
+    gap: 20px;
+    text-transform: capitalize;
   }
-  
-  .search-form input[type="text"] {
-    flex-grow: 1;
-    padding: 5px;
-    
-  }
-  
-  .search-form button {
-    padding: 5px 10px;
-    background-color: #FF6A37;
+  a {
     color: #f0f0f0;
-    
-    border: none;
+    font-size: 16px;
   }
-  .navbar-container {
-    display: flex;
-    gap: 15px;
-    .menu-sidebar {
-      button {
-        outline: none;
-        border: none;
-      }
-        i{
-            font-size: 30px;
-            background-color: #FF6A37;
-            color: #f0f0f0;
-            
-        }
+}
+
+.search-form {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+.search-form input[type="text"] {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  background-color: #ff6a37;
+  color: #f0f0f0;
+
+  border: none;
+}
+.navbar-container {
+  display: flex;
+  gap: 15px;
+  .menu-sidebar {
+    button {
+      outline: none;
+      border: none;
     }
-    .icon-store{
-      display: flex;
-      gap: 10px;
+    i {
       font-size: 30px;
-      margin-right: 40px;
+      background-color: #ff6a37;
+      color: #f0f0f0;
+    }
+  }
+  .icon-store {
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+    margin-right: 40px;
+  }
+}
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+  .cart-item {
+    color: white;
+  }
+  .cart-item-value {
+    color: #ff6a37;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 0px 7px;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+  }
+  .cart-modal {
+    display: none;
+    // position: absolute;
+    // right: 0;
+
+    z-index: 9999;
+    width: 300px;
+  }
+  :hover {
+    .cart-modal {
+      position: absolute;
+      display: block;
+      right: 0;
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .logo-store {
+      margin: auto;
+    }
+    .search {
+      width: 75%;
+      .search-form {
+        width: 250px;
+      }
+    }
+  }
+  .horizan-line {
+    display: none;
+  }
+  .navbar-cart:hover {
+    .cart-modal {
+      display: none;
     }
   }
   .navbar-cart {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-        position: relative;
-        .cart-item {
-          color: white;
-        }
-        .cart-item-value {
-          color: #FF6A37;
-          background-color: white;
-          font-size: 15px;
-          border-radius: 50%;
-          padding: 0px 7px;
-          position: absolute;
-          top: 10px;
-          right: -10px;
-        }
-        .cart-modal {
-          display: none;
-          // position: absolute;
-          // right: 0;
-
-          z-index: 9999;
-          width: 300px
-        }
-        :hover {
-          .cart-modal {
-            position: absolute;
-            display: block;
-            right: 0;
-          }
-        }
+    right: -25px;
   }
+  .search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+    width: 50%;
+  }
+  .navbar-container {
+    .icon-store {
+      display: flex;
+      margin-right: 0px;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .menu-sidebar {
+    display: none;
+  }
+  .navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item-list-search {
+    li {
+      display: none;
+    }
+  }
+  .navbar-cart .cart-item-value {
+    color: #ff6a37;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 0px 7px;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+  }
+}

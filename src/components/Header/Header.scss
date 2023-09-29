@@ -46,3 +46,12 @@ ul {
     }
     
 }
+@media only screen and (max-width: 375px){
+    .container {
+        padding: 0px 20px;
+        background-color: #FF6A37;
+    }
+    .header-top-l,.header-top-r {
+        display: none;
+    }
+}

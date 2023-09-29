@@ -101,14 +101,40 @@
   }
   .center-section {
     width: 300px; /* Độ rộng của div */
-  height: 200px; /* Chiều cao của div */
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  text-align: center; /* Căn giữa nội dung ngang */
-  line-height: 200px; /* Căn giữa nội dung dọc */
-  position: absolute; /* Để làm việc với position */
-  top: 50%; /* Đưa div lên phía trên 50% của màn hình */
-  left: 50%; /* Đưa div lên phía trái 50% của màn hình */
-  transform: translate(-50%, -50%); 
+    height: 200px; /* Chiều cao của div */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center; /* Căn giữa nội dung ngang */
+    line-height: 200px; /* Căn giữa nội dung dọc */
+    position: absolute; /* Để làm việc với position */
+    top: 50%; /* Đưa div lên phía trên 50% của màn hình */
+    left: 50%; /* Đưa div lên phía trái 50% của màn hình */
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .cart-header {
+    display: none;
+  }
+  .cart-bottom-checkout {
+    .cart-detail {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .container-checkout {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 710px;
+    flex-direction: column-reverse;
   }
 }
